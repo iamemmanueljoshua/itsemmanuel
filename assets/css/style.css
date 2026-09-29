@@ -219,7 +219,7 @@ ul { list-style: none; }
     opacity: 0.94;
     filter: brightness(1.04) saturate(1.02) contrast(1.01);
   }
-  .hero-content { padding-right: 1.5rem; }
+  .hero-content { padding-right: 1.5rem; width: 100%; min-width: 0; }
   .prompt, .hero-role-desktop, .hero-summary-desktop, .hero-proof, .desktop-intro, .hero-echo-cta { display: none; }
   .mobile-eyebrow {
     display: block;
@@ -263,6 +263,8 @@ ul { list-style: none; }
     min-height: 48px; text-align: center; padding: 0.7rem 0.75rem;
     font-size: 0.78rem; white-space: nowrap;
   }
+  .hero-actions .hero-echo-cta { display: none; }
+  .btn { max-width: 100%; white-space: normal; }
   .logo { font-size: 0.95rem; }
   .section-title h2 { font-size: clamp(1.4rem, 6vw, 1.9rem); }
   .timeline-role { font-size: 1rem; }
@@ -501,7 +503,8 @@ a.card:hover { text-decoration: none; }
   .card-title { font-size: 1rem; }
   .card-body { line-height: 1.65; }
   .card:hover { transform: none; box-shadow: none; }
-  .contact-grid { grid-template-columns: 1fr; gap: 1rem; }
+  .contact-grid { grid-template-columns: minmax(0, 1fr); gap: 1rem; }
+  .contact-item { min-width: 0; overflow-wrap: anywhere; }
   #bg-particles { opacity: 0.35; }
 }
 @media (max-width: 400px) {
